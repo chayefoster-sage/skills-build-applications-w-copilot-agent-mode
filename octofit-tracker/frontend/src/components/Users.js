@@ -21,20 +21,22 @@ const Users = () => {
       <div className="card-body">
         <h2 className="card-title mb-4 text-warning">Users</h2>
         <div className="table-responsive">
-          <table className="table table-striped table-bordered">
-            <thead className="table-light">
+          <table className="table">
+            <thead>
               <tr>
-                {users.length > 0 && Object.keys(users[0]).map((key) => (
-                  <th key={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
-                ))}
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Team</th>
               </tr>
             </thead>
             <tbody>
               {users.map((user, idx) => (
                 <tr key={user.id || idx}>
-                  {Object.values(user).map((value, i) => (
-                    <td key={i}>{typeof value === 'object' ? JSON.stringify(value) : value}</td>
-                  ))}
+                  <td>{user.id}</td>
+                  <td>{user.username}</td>
+                  <td>{user.email}</td>
+                  <td>{user.team && user.team.name ? user.team.name : ''}</td>
                 </tr>
               ))}
             </tbody>
