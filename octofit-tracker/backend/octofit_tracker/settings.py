@@ -1,5 +1,4 @@
-# Custom user model
-AUTH_USER_MODEL = 'octofit_tracker.User'
+
 """
 Django settings for octofit_tracker project.
 
@@ -16,6 +15,9 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Custom user model
+AUTH_USER_MODEL = 'octofit_tracker.User'
 
 
 # Quick-start development settings - unsuitable for production
