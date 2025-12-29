@@ -2,7 +2,8 @@ from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 from djongo import models
 
-from octofit_tracker import models as app_models
+
+from octofit_tracker.models import Team, Activity, Leaderboard, Workout
 
 class Command(BaseCommand):
     help = 'Populate the octofit_db database with test data'

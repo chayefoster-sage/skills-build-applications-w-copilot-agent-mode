@@ -21,7 +21,7 @@ const Teams = () => {
       <div className="card-body">
         <h2 className="card-title mb-4 text-info">Teams</h2>
         <div className="table-responsive">
-          <table className="table table-striped table-bordered">
+          <table className="table">
             <thead className="table-light">
               <tr>
                 {teams.length > 0 && Object.keys(teams[0]).map((key) => (

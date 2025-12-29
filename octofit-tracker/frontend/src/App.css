@@ -1,16 +1,188 @@
-.App {
-  text-align: center;
+/* Leaderboard Title Box Styling */
+.octofit-leaderboard-title-box {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  border-radius: 12px;
+  padding: 1.2rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.10);
+}
+.octofit-leaderboard-title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Modern Table Styling for All Tables */
+table, .octofit-leaderboard-table {
+  background: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.10);
+  margin-bottom: 2rem;
+}
+th {
+  background: #fff;
+  color: #222b45;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 600;
+}
+td {
+  font-size: 1.05rem;
+  border: none;
+  background: #fff;
+}
+tr:nth-child(even) td {
+  background: #f6f9fc;
+}
+tr:nth-child(1) td {
+  background: #ffe082;
+  font-weight: bold;
+}
+tr:nth-child(2) td {
+  background: #e0e0e0;
+  font-weight: bold;
+}
+tr:nth-child(3) td {
+  background: #cd7f32;
+  font-weight: bold;
+}
+table, th, td {
+  border-radius: 0 !important;
+}
+/* Leaderboard Table Custom Styling */
+.octofit-leaderboard-table {
+  background: #f8fafc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(30,60,114,0.10);
+  margin-bottom: 2rem;
+}
+.octofit-leaderboard-table th {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border: none;
+}
+.octofit-leaderboard-table td {
+  font-size: 1.05rem;
+  border: none;
+  background: #fff;
+}
+.octofit-leaderboard-table tr:nth-child(1) td {
+  background: #ffe082;
+  font-weight: bold;
+}
+.octofit-leaderboard-table tr:nth-child(2) td {
+  background: #e0e0e0;
+  font-weight: bold;
+}
+.octofit-leaderboard-table tr:nth-child(3) td {
+  background: #ffd54f;
+  font-weight: bold;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #222b45;
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.octofit-navbar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.08);
+}
+
+.octofit-logo {
+  height: 48px;
+  margin-right: 1.5rem;
+}
+
+.octofit-navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.octofit-navbar a:hover {
+  color: #ffd700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e3c72;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(30,60,114,0.06);
+  margin: 1.5rem 0;
+}
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0eafc;
+}
+th {
+  background: #2a5298;
+  color: #fff;
+  font-weight: 600;
+}
+tr:nth-child(even) {
+  background: #f6f9fc;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(67,206,162,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+  color: #ffd700;
+}
+
+a {
+  color: #2a5298;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #43cea2;
+}
+
+.octofit-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(30,60,114,0.10);
+
+  padding: 2rem 2.5rem;
 }
 
 .App-header {

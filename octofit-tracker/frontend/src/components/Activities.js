@@ -21,20 +21,24 @@ const Activities = () => {
       <div className="card-body">
         <h2 className="card-title mb-4 text-primary">Activities</h2>
         <div className="table-responsive">
-          <table className="table table-striped table-bordered">
+          <table className="table">
             <thead className="table-light">
               <tr>
-                {activities.length > 0 && Object.keys(activities[0]).map((key) => (
-                  <th key={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
-                ))}
+                <th>Id</th>
+                <th>User</th>
+                <th>Type</th>
+                <th>Duration (min)</th>
+                <th>Distance (km)</th>
               </tr>
             </thead>
             <tbody>
               {activities.map((activity, idx) => (
                 <tr key={activity.id || idx}>
-                  {Object.values(activity).map((value, i) => (
-                    <td key={i}>{typeof value === 'object' ? JSON.stringify(value) : value}</td>
-                  ))}
+                  <td>{activity.id}</td>
+                  <td>{activity.user && activity.user.username ? activity.user.username : ''}</td>
+                  <td>{activity.type}</td>
+                  <td>{activity.duration}</td>
+                  <td>{activity.distance}</td>
                 </tr>
               ))}
             </tbody>
